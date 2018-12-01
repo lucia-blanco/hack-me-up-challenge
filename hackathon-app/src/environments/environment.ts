@@ -11,7 +11,11 @@ export const environment = {
     projectId: 'challenge-aad5b',
     storageBucket: 'challenge-aad5b.appspot.com',
     messagingSenderId: '736651861630'
-  }
+  },
+  userNode: 'usuario',
+  hackathonNode: 'hackathon',
+  participantesNode: 'participantes',
+  tallerNode: 'taller'
 };
 
 /*

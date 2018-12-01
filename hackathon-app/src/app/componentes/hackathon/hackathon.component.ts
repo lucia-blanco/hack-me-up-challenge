@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Router } from '@angular/router';
+import { FirebaseService } from '../../services/firebase.service';
+
 @Component({
   selector: 'app-hackathon',
   templateUrl: './hackathon.component.html',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HackathonComponent implements OnInit {
 
-  constructor() { }
+  nombre;
+  fecha;
+  sitio;
+  tecnologia;
+
+  constructor(private fbS: FirebaseService,
+              private router: Router) { }
 
   ngOnInit() {
+  }
+
+  crearHackathon() {
+    console.log(this.nombre);
+    this.fbS.createHackathon(this.nombre, this.fecha, this.sitio, this.tecnologia);
   }
 
 }

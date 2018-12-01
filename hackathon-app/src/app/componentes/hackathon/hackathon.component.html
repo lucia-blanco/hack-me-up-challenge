@@ -1,3 +1,7 @@
-<p>
-  hackathon works!
-</p>
+<form>
+  <input placeholder="nombre" ([NgModel])="nombre" name="nombre">
+  <input placeholder="fecha" type="date" ([NgModel])="fecha" name="fecha">
+  <input placeholder="sitio" ([NgModel])="sitio" name="sitio">
+  <input placeholder="tecnologia" ([NgModel])="tecnologia" name="tecnologia">
+  <button (click)="crearHackathon()">Crear Hackathon</button>
+</form>
