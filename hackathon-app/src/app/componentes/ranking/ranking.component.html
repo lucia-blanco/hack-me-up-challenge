@@ -1,3 +1,4 @@
-<p>
-  ranking works!
-</p>
+<div class="row m-0 mb-2 border border-secondary align-items-center" *ngFor="let user of users">
+  <img style="width: 54px; height: 54px; margin-right: 5px;" [src]="user.image" alt="">
+  <div>{{ user.name }}</div>
+</div>
