@@ -1,3 +1,17 @@
-<p>
-  dashboard works!
-</p>
+<ng-container *ngIf="user.rol == 'admin'">
+  <input placeholder="nombre" [(ngModel)]="nombre" name="nombre">
+  <input placeholder="fecha" type="date" [(ngModel)]="fecha" name="fecha">
+  <input placeholder="sitio" [(ngModel)]="sitio" name="sitio">
+  <input placeholder="tecnologia" [(ngModel)]="tecnologia" name="tecnologia">
+  <button (click)="crearHackathon()">Crear Hackathon</button>
+</ng-container>
+
+<div style="display: grid">
+  <div *ngFor="let hackathon of hackathones | keyvalue">
+    <h1>{{hackathon.value.nombre}}</h1>
+    <p>{{ hackathon.value.tecnologia }}</p>
+    <h4>{{hackathon.value.sitio}}</h4>
+    <p>{{hackathon.value.fecha}}</p>
+
+  </div>
+<div>
